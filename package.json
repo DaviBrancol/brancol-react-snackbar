@@ -1,0 +1,59 @@
+{
+  "name": "@brancol/react-snackbar",
+  "description": "Brancol - React Snackbar",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build:cjs": "rollup --config config/cjs.js",
+    "build:esm": "rollup --config config/esm.js"
+  },
+  "keywords": [
+    "react",
+    "react-snackbar",
+    "snackbar",
+    "notification",
+    "ux",
+    "toast",
+    "feedback",
+    "hooks",
+    "context",
+    "ui",
+    "brancol"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "peerDependencies": {
+    "@types/classnames": "^2.2.10",
+    "classnames": "^2.2.6",
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@types/react": "^16.9.43",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tailwindcss": "^1.5.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.7"
+  }
+}
