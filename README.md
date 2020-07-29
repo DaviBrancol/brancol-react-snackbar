@@ -73,8 +73,8 @@ export function App() {
 
 Want more examples on how to use this snackbar or more use cases for your application?
 
-Checkout my javascript [React Tailwind - Base Project]("https://github.com/DaviBrancol/React-Tailwind")
-Or if you using typescript [React Tailwind - Typescript Base Project]("https://github.com/DaviBrancol/React-Tailwind-Typescript")
+Checkout my javascript [React Tailwind - Base Project]("https://github.com/DaviBrancol/React-Tailwind")<br>
+Or if you using typescript [React Tailwind - Typescript Base Project]("https://github.com/DaviBrancol/React-Tailwind-Typescript")<br>
 
 ## Props
 
@@ -106,6 +106,6 @@ When calling the useSnackbar open methos, you can send a list of options for tha
 
 You can find other projects and more stuff in my:
 
-[Github Profile](https://github.com/DaviBrancol)
-[Personal Website](https://davibrancol.com.br)
-[Instagram Profile](https://instagram.com/davibrancol17)
+[Github Profile](https://github.com/DaviBrancol)<br>
+[Personal Website](https://davibrancol.com.br)<br>
+[Instagram Profile](https://instagram.com/davibrancol17)<br>
