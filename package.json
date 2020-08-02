@@ -1,13 +1,14 @@
 {
   "name": "@brancol/react-snackbar",
   "description": "Brancol - React Snackbar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "files": [
     "./dist"
   ],
   "scripts": {
     "start": "rollup -c -w",
+    "prebuild": "jest",
     "build": "rollup -c",
     "test": "jest",
     "test:dev": "jest --watch"

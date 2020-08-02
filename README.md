@@ -2,8 +2,7 @@
 
 Snackbar Component developed for React JS.
 
-This project was developed for custom styles, but is best integrated with Tailwind CSS.
-You can find more about the Tailwind CSS framework [here](https://tailwindcss.com/).
+This project was developed for custom styles. You have a set of props that can change the snackbar appearance, but you may also create your own with the SnackbarProvider render prop.
 
 ## Table of Contents
 
@@ -13,6 +12,7 @@ You can find more about the Tailwind CSS framework [here](https://tailwindcss.co
 - [Props](#props)
 - [Options](#options)
 - [Projects](#projects)
+- [ChangeLog](#changelog)
 
 ## Installation
 
@@ -67,8 +67,8 @@ export function App() {
 
 Want more examples on how to use this snackbar or more use cases for your application?
 
-Checkout my javascript [React Tailwind - Base Project]("https://github.com/DaviBrancol/React-Tailwind")<br>
-Or if you using typescript [React Tailwind - Typescript Base Project]("https://github.com/DaviBrancol/React-Tailwind-Typescript")<br>
+Checkout my Javascript [React Tailwind - Base Project]("https://github.com/DaviBrancol/React-Tailwind")<br>
+Or if you using Typescript [React Tailwind - Typescript Base Project]("https://github.com/DaviBrancol/React-Tailwind-Typescript")<br>
 
 ## Props
 
@@ -77,7 +77,7 @@ Here is a full detailed list of the props you can send to use the SnackbarProvid
 | Name                   | Type            | Default                      | Description                                            | Values                               |
 | ---------------------- | --------------- | ---------------------------- | ------------------------------------------------------ | ------------------------------------ |
 | defaultPosition        | string          | tr                           | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
-| defaultDisplayDuration | number          | 5000                         | Time that the Snackbar will be displayed               | 0 - 100000                           |
+| defaultDisplayDuration | number          | 5000                         | Time that the Snackbar will be displayed               | 1000 - 100000                        |
 | defaultAnimationDelay  | number          | 500                          | Time that the Snackbar will take to fadein and fadeout | 100 - 3000                           |
 | successColor           | string          | '#28c960'                    | Default success color of the Snackbar                  | HEX Color                            |
 | warningColor           | string          | '#f49716'                    | Default warning color of the Snackbar                  | HEX Color                            |
@@ -95,11 +95,15 @@ When calling the useSnackbar open methos, you can send a list of options for tha
 
 | Name             | Type    | Description                                            | Values                               |
 | ---------------- | ------- | ------------------------------------------------------ | ------------------------------------ |
-| duration         | number  | Time that the Snackbar will be displayed               | 100 - 1000                           |
-| animationDelay   | number  | Time that the Snackbar will take to fadein and fadeout | 0 - 100000                           |
+| duration         | number  | Time that the Snackbar will be displayed               | 1000 - 100000                        |
+| animationDelay   | number  | Time that the Snackbar will take to fadein and fadeout | 100 - 3000                           |
 | position         | string  | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
 | displayIcon      | boolean | Indicates if the left icon will be displayed           | true - false                         |
 | displayCloseIcon | boolean | Indicates if the close icon will be displayed          | true - false                         |
+
+## Tests
+
+This snackbar component is already tested using [Jest](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/). You may create your own tests using this modules as well.
 
 ## Projects
 
@@ -110,6 +114,12 @@ You can find other projects and more stuff in my:
 [Instagram Profile](https://instagram.com/davibrancol17)<br>
 
 ## ChangeLog Header
+
+#### 0.2.0
+
+- Added tests with jest for a better security of the module.
+- Fixed bugs with custom duration and position in show call.
+- Fixed some css names for better using and testing.
 
 #### 0.1.0
 
