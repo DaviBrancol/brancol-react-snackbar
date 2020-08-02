@@ -11,7 +11,7 @@ export function useSnackbar() {
   function configure(opt: SnackbarOptions) {
     context.setDuration(opt && opt.duration ? opt.duration : context.duration)
     context.setAnimationDelay(opt && opt.animationDelay ? opt.animationDelay : context.animationDelay)
-    context.setPosition(opt && opt.position ? getPosition(context.position) : context.position)
+    context.setPosition(opt && opt.position ? getPosition(opt.position) : context.position)
     context.setDisplayIcon(opt && opt.displayIcon ? opt.displayIcon : context.displayIcon)
     context.setDisplayCloseIcon(opt && opt.displayCloseIcon ? opt.displayCloseIcon : context.displayCloseIcon)
     context.setStyle(opt.style)
@@ -22,9 +22,12 @@ export function useSnackbar() {
     context.setMessage(message)
     context.setIsOpen(true)
     context.setFadeTimeout(
-      setTimeout(() => {
-        close()
-      }, context.duration)
+      setTimeout(
+        () => {
+          close()
+        },
+        options && options.duration ? options.duration : context.duration
+      )
     )
   }
 

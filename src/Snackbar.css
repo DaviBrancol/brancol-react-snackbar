@@ -18,7 +18,7 @@
   width: auto;
 }
 
-.snackbar-custom.snackbar_showIcon {
+.snackbar-custom.snackbar-showIcon {
   width: 20%;
 }
 
@@ -28,20 +28,20 @@
   align-items: center;
 }
 
-.snackbar-custom .snackbar-content .snackbar_icon {
+.snackbar-custom .snackbar-content .snackbar-icon {
   font-size: 1.25rem;
 }
 
-.snackbar-custom .snackbar-content .snackbar_message {
+.snackbar-custom .snackbar-content .snackbar-message {
   color: white;
   font-size: 1rem;
   margin-left: 0;
 }
 
-.snackbar-custom.snackbar_showIcon .snackbar-content .snackbar_message {
+.snackbar-custom.snackbar-showIcon .snackbar-content .snackbar-message {
   margin-left: 0.75rem;
 }
 
-.snackbar-custom .snackbar_closeIcon {
+.snackbar-custom .snackbar-closeIcon {
   cursor: pointer;
 }
