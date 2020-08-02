@@ -1,0 +1,47 @@
+.snackbar-custom {
+  position: absolute;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.snackbar-custom.snackbar-open {
+  opacity: 1;
+}
+
+.snackbar-custom {
+  width: auto;
+}
+
+.snackbar-custom.snackbar_showIcon {
+  width: 20%;
+}
+
+.snackbar-custom .snackbar-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.snackbar-custom .snackbar-content .snackbar_icon {
+  font-size: 1.25rem;
+}
+
+.snackbar-custom .snackbar-content .snackbar_message {
+  color: white;
+  font-size: 1rem;
+  margin-left: 0;
+}
+
+.snackbar-custom.snackbar_showIcon .snackbar-content .snackbar_message {
+  margin-left: 0.75rem;
+}
+
+.snackbar-custom .snackbar_closeIcon {
+  cursor: pointer;
+}

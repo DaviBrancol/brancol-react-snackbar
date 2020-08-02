@@ -1,83 +1,60 @@
-import { useContext } from "react";
-import { SnackbarContext } from "./SnackbarProvider";
-import { SnackbarProps, SnackbarOptions, Style } from "./SnackbarProps";
+import { useContext } from 'react'
+import { SnackbarContext } from './SnackbarProvider'
+import { SnackbarProps, SnackbarOptions, Style, getPosition } from './SnackbarProps'
 
 export function useSnackbar() {
-  const context = useContext<SnackbarProps>(SnackbarContext);
+  const context = useContext<SnackbarProps>(SnackbarContext)
   if (!context) {
-    throw new Error(`useSnackbar must be used within a SnackbarProvider`);
+    throw new Error(`useSnackbar must be used within a SnackbarProvider`)
   }
 
-  function configure(options: SnackbarOptions) {
-    context.setDuration((current: number) => options.duration || current);
-    context.setDisplayIcon(
-      (current: boolean) => options.displayIcon || current
-    );
-    context.setStyle((current: Style) => options.style || current);
+  function configure(opt: SnackbarOptions) {
+    context.setDuration(opt && opt.duration ? opt.duration : context.duration)
+    context.setAnimationDelay(opt && opt.animationDelay ? opt.animationDelay : context.animationDelay)
+    context.setPosition(opt && opt.position ? getPosition(context.position) : context.position)
+    context.setDisplayIcon(opt && opt.displayIcon ? opt.displayIcon : context.displayIcon)
+    context.setDisplayCloseIcon(opt && opt.displayCloseIcon ? opt.displayCloseIcon : context.displayCloseIcon)
+    context.setStyle(opt.style)
   }
 
-  function openSnackbar(
-    message: string,
-    icon: string = null,
-    options: SnackbarOptions
-  ) {
-    configure(options);
-    context.setMessage(message);
-    context.setIcon(icon);
-    context.setIsOpen(true);
+  function openSnackbar(message: string, options: SnackbarOptions) {
+    configure(options)
+    context.setMessage(message)
+    context.setIsOpen(true)
     context.setFadeTimeout(
       setTimeout(() => {
-        close();
+        close()
       }, context.duration)
-    );
+    )
   }
 
-  function open(
-    message: string,
-    icon: string = null,
-    options: SnackbarOptions
-  ) {
+  function open(message: string, options: SnackbarOptions) {
     if (context.isOpen) {
-      clearTimeout(context.fadeTimeout);
-      close();
+      close()
       setTimeout(() => {
-        openSnackbar(message, icon, options);
-      }, context.animationDelay);
+        openSnackbar(message, options)
+      }, context.animationDelay)
     } else {
-      openSnackbar(message, icon, options);
+      openSnackbar(message, options)
     }
   }
 
   function close() {
-    clearTimeout(context.fadeTimeout);
-    context.setIsOpen(false);
+    clearTimeout(context.fadeTimeout)
+    context.setIsOpen(false)
   }
 
   function showSuccess(message: string, options: SnackbarOptions) {
-    open(message, "fa fa-check-circle", { ...options, style: Style.success });
+    open(message, { ...options, style: Style.success })
   }
 
   function showWarning(message: string, options: SnackbarOptions) {
-    open(message, "fa fa-exclamation-triangle", {
-      ...options,
-      style: Style.warning,
-    });
+    open(message, { ...options, style: Style.warning })
   }
 
   function showDanger(message: string, options: SnackbarOptions) {
-    open(message, "fa fa-exclamation-circle", {
-      ...options,
-      style: Style.danger,
-    });
+    open(message, { ...options, style: Style.danger })
   }
 
-  function show(
-    message: string,
-    icon: string = null,
-    options: SnackbarOptions
-  ) {
-    open(message, icon, { ...options });
-  }
-
-  return { showSuccess, showWarning, showDanger, show };
+  return { showSuccess, showWarning, showDanger }
 }

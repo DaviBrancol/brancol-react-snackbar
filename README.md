@@ -54,15 +54,9 @@ export function App() {
     <div>
       <h1>App</h1>
       <div>
-        <button onClick={() => snackbar.showSuccess('Success Message')}>
-          Show Success
-        </button>
-        <button onClick={() => snackbar.showWarning('Warning Message')}>
-          Show Warning
-        </button>
-        <button onClick={() => snackbar.showDanger('Danger Message')}>
-          Show Danger
-        </button>
+        <button onClick={() => snackbar.showSuccess('Success Message')}>Show Success</button>
+        <button onClick={() => snackbar.showWarning('Warning Message')}>Show Warning</button>
+        <button onClick={() => snackbar.showDanger('Danger Message')}>Show Danger</button>
       </div>
     </div>
   )
@@ -80,27 +74,32 @@ Or if you using typescript [React Tailwind - Typescript Base Project]("https://g
 
 Here is a full detailed list of the props you can send to use the SnackbarProvider.
 
-| Name                   | Type            | Default | Description                                            | Values                               |
-| ---------------------- | --------------- | ------- | ------------------------------------------------------ | ------------------------------------ |
-| defaultPosition        | string          | tr      | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
-| defaultDisplayDuration | number          | 5000    | Time that the Snackbar will be displayed               | 0 - 100000                           |
-| defaultAnimationDelay  | number          | 500     | Time that the Snackbar will take to fadein and fadeout | 100 - 3000                           |
-| showIcon               | boolean         | true    | Indicates if the left icon will be displayed           | true - false                         |
-| showCloseIcon          | boolean         | true    | Indicates if the close icon will be displayed          | true - false                         |
-| render                 | (props) => Node | null    | A custom Snackbar component with all props             | ReactNode                            |
+| Name                   | Type            | Default                      | Description                                            | Values                               |
+| ---------------------- | --------------- | ---------------------------- | ------------------------------------------------------ | ------------------------------------ |
+| defaultPosition        | string          | tr                           | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
+| defaultDisplayDuration | number          | 5000                         | Time that the Snackbar will be displayed               | 0 - 100000                           |
+| defaultAnimationDelay  | number          | 500                          | Time that the Snackbar will take to fadein and fadeout | 100 - 3000                           |
+| successColor           | string          | '#28c960'                    | Default success color of the Snackbar                  | HEX Color                            |
+| warningColor           | string          | '#f49716'                    | Default warning color of the Snackbar                  | HEX Color                            |
+| dangerColor            | string          | '#fc5050'                    | Default danger color of the Snackbar                   | HEX Color                            |
+| successIcon            | string          | 'fa fa-check-circle'         | Default success icon of the Snackbar                   | FontAwesome Icon                     |
+| warningIcon            | string          | 'fa fa-exclamation-triangle' | Default warning icon of the Snackbar                   | FontAwesome Icon                     |
+| dangerIcon             | string          | 'fa fa-exclamation-circle'   | Default danger icon of the Snackbar                    | FontAwesome Icon                     |
+| showIcon               | boolean         | true                         | Indicates if the left icon will be displayed           | true - false                         |
+| showCloseIcon          | boolean         | true                         | Indicates if the close icon will be displayed          | true - false                         |
+| render                 | (props) => Node | null                         | A custom Snackbar component with all props             | ReactNode                            |
 
 ## Options
 
 When calling the useSnackbar open methos, you can send a list of options for that specific open.
 
-| Name             | Type    | Description                                            | Values                                      |
-| ---------------- | ------- | ------------------------------------------------------ | ------------------------------------------- |
-| duration         | number  | Time that the Snackbar will be displayed               | 100 - 1000                                  |
-| animationDelay   | number  | Time that the Snackbar will take to fadein and fadeout | 0 - 100000                                  |
-| position         | string  | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br']        |
-| displayIcon      | boolean | Indicates if the left icon will be displayed           | true - false                                |
-| displayCloseIcon | boolean | Indicates if the close icon will be displayed          | true - false                                |
-| style            | string  | The style to be used as background and text            | ['success', 'warning', 'danger', 'primary'] |
+| Name             | Type    | Description                                            | Values                               |
+| ---------------- | ------- | ------------------------------------------------------ | ------------------------------------ |
+| duration         | number  | Time that the Snackbar will be displayed               | 100 - 1000                           |
+| animationDelay   | number  | Time that the Snackbar will take to fadein and fadeout | 0 - 100000                           |
+| position         | string  | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
+| displayIcon      | boolean | Indicates if the left icon will be displayed           | true - false                         |
+| displayCloseIcon | boolean | Indicates if the close icon will be displayed          | true - false                         |
 
 ## Projects
 
@@ -109,3 +108,13 @@ You can find other projects and more stuff in my:
 [Github Profile](https://github.com/DaviBrancol)<br>
 [Personal Website](https://davibrancol.com.br)<br>
 [Instagram Profile](https://instagram.com/davibrancol17)<br>
+
+## ChangeLog Header
+
+#### 0.1.0
+
+- Removed Tailwind must need from CSS.
+- Added custom css class for styling.
+- Fixed props from Options and Provider.
+- Updated docs with new Props.
+- Updated some padding visuals.
