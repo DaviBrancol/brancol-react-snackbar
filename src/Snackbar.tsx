@@ -61,7 +61,9 @@ export function Snackbar({
         {displayIcon && <i className={cs(`${styles.snackbarIcon} ${getIcon(style)}`)} />}
         <p className={cs(`${styles.snackbarMessage}`)}>{message}</p>
       </div>
-      {displayCloseIcon && <i onClick={() => setIsOpen(false)} className={cs(`${styles.snackbarCloseIcon} fa fa-times`)} />}
+      {displayCloseIcon && (
+        <i onClick={() => setIsOpen(false)} className={cs(`${styles.snackbarCloseIcon} fa fa-times`)} />
+      )}
     </div>
   )
 }

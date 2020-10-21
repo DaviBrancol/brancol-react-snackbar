@@ -115,6 +115,13 @@ You can find other projects and more stuff in my:
 
 ## ChangeLog Header
 
+#### 0.2.3
+
+- Bugfix on mobile responsivity.
+- Bugfix on position fixed.
+- Bugfix on pointer events from the snackbar.
+- Bugfix on z-index for 99999.
+
 #### 0.2.0
 
 - Added tests with jest for a better security of the module.

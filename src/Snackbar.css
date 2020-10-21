@@ -1,5 +1,5 @@
 .snackbar-custom {
-  position: absolute;
+  position: fixed;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   display: flex;
@@ -8,10 +8,13 @@
   color: white;
   opacity: 0;
   transition-property: opacity;
+  z-index: 99999;
+  pointer-events: none;
 }
 
 .snackbar-custom.snackbar-open {
   opacity: 1;
+  pointer-events: all;
 }
 
 .snackbar-custom {
@@ -44,4 +47,17 @@
 
 .snackbar-custom .snackbar-closeIcon {
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .snackbar-custom {
+    position: fixed;
+    width: calc(100% - 20px);
+    top: 10px;
+    left: 10px;
+    padding: 20px 20px;
+    right: auto;
+    bottom: auto;
+    z-index: 99999;
+  }
 }
