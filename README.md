@@ -112,7 +112,7 @@ You can find other projects and more stuff in my:
 
 ## ChangeLog Header
 
-#### 0.2.8
+#### 0.3.0
 
 - Fixed mobile responsivity bug.
 - Added react-icons package and removed fontawesome dependency.

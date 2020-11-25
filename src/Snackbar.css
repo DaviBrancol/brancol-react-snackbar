@@ -1,5 +1,5 @@
 .snackbar-custom {
-  position: absolute;
+  position: fixed;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   display: flex;
@@ -13,6 +13,7 @@
 
 .snackbar-custom.snackbar-open {
   opacity: 1;
+  pointer-events: all;
 }
 
 .snackbar-custom {
@@ -49,10 +50,12 @@
 
 @media (max-width: 767px) {
   .snackbar-custom {
+    position: fixed;
     width: calc(100% - 20px) !important;
     right: auto !important;
     top: 15px !important;
     bottom: auto !important;
     left: 15px !important;
+    padding: 10px !important;
   }
 }
