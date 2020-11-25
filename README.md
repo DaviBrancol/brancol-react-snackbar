@@ -74,20 +74,17 @@ Or if you using Typescript [React Tailwind - Typescript Base Project]("https://g
 
 Here is a full detailed list of the props you can send to use the SnackbarProvider.
 
-| Name                   | Type            | Default                      | Description                                            | Values                               |
-| ---------------------- | --------------- | ---------------------------- | ------------------------------------------------------ | ------------------------------------ |
-| defaultPosition        | string          | tr                           | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
-| defaultDisplayDuration | number          | 5000                         | Time that the Snackbar will be displayed               | 1000 - 100000                        |
-| defaultAnimationDelay  | number          | 500                          | Time that the Snackbar will take to fadein and fadeout | 100 - 3000                           |
-| successColor           | string          | '#28c960'                    | Default success color of the Snackbar                  | HEX Color                            |
-| warningColor           | string          | '#f49716'                    | Default warning color of the Snackbar                  | HEX Color                            |
-| dangerColor            | string          | '#fc5050'                    | Default danger color of the Snackbar                   | HEX Color                            |
-| successIcon            | string          | 'fa fa-check-circle'         | Default success icon of the Snackbar                   | FontAwesome Icon                     |
-| warningIcon            | string          | 'fa fa-exclamation-triangle' | Default warning icon of the Snackbar                   | FontAwesome Icon                     |
-| dangerIcon             | string          | 'fa fa-exclamation-circle'   | Default danger icon of the Snackbar                    | FontAwesome Icon                     |
-| showIcon               | boolean         | true                         | Indicates if the left icon will be displayed           | true - false                         |
-| showCloseIcon          | boolean         | true                         | Indicates if the close icon will be displayed          | true - false                         |
-| render                 | (props) => Node | null                         | A custom Snackbar component with all props             | ReactNode                            |
+| Name                   | Type            | Default   | Description                                            | Values                               |
+| ---------------------- | --------------- | --------- | ------------------------------------------------------ | ------------------------------------ |
+| defaultPosition        | string          | tr        | Position of the Snackbar                               | ['tl', 'tc', 'tr', 'bl', 'bc', 'br'] |
+| defaultDisplayDuration | number          | 5000      | Time that the Snackbar will be displayed               | 1000 - 100000                        |
+| defaultAnimationDelay  | number          | 500       | Time that the Snackbar will take to fadein and fadeout | 100 - 3000                           |
+| successColor           | string          | '#28c960' | Default success color of the Snackbar                  | HEX Color                            |
+| warningColor           | string          | '#f49716' | Default warning color of the Snackbar                  | HEX Color                            |
+| dangerColor            | string          | '#fc5050' | Default danger color of the Snackbar                   | HEX Color                            |
+| showIcon               | boolean         | true      | Indicates if the left icon will be displayed           | true - false                         |
+| showCloseIcon          | boolean         | true      | Indicates if the close icon will be displayed          | true - false                         |
+| render                 | (props) => Node | null      | A custom Snackbar component with all props             | ReactNode                            |
 
 ## Options
 
@@ -114,6 +111,11 @@ You can find other projects and more stuff in my:
 [Instagram Profile](https://instagram.com/davibrancol17)<br>
 
 ## ChangeLog Header
+
+#### 0.2.8
+
+- Fixed mobile responsivity bug.
+- Added react-icons package and removed fontawesome dependency.
 
 #### 0.2.0
 

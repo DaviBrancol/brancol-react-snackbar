@@ -8,6 +8,7 @@
   color: white;
   opacity: 0;
   transition-property: opacity;
+  z-index: 100000;
 }
 
 .snackbar-custom.snackbar-open {
@@ -24,7 +25,7 @@
 
 .snackbar-custom .snackbar-content {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -44,4 +45,14 @@
 
 .snackbar-custom .snackbar-closeIcon {
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .snackbar-custom {
+    width: calc(100% - 20px) !important;
+    right: auto !important;
+    top: 15px !important;
+    bottom: auto !important;
+    left: 15px !important;
+  }
 }

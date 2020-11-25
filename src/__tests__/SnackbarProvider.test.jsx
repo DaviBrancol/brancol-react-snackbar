@@ -76,9 +76,9 @@ describe('Custom Context Props', () => {
     expect(Snackbar.props().style).not.toMatchObject({ transitionDuration: `${defaults.defaultAnimationDelay}ms` })
   })
 
-  it('should open the snackbar with a custom successColor and successIcon', () => {
+  it('should open the snackbar with a custom successColor', () => {
     // Wrapper with Provider
-    const wrapper = mountContext(<ComponentMock />, { successColor: '#000', successIcon: 'fa fa-eye' })
+    const wrapper = mountContext(<ComponentMock />, { successColor: '#000' })
 
     // Get the component mock and clicks on the openSuccess button.
     const Component = wrapper.find(ComponentMock)
@@ -86,18 +86,15 @@ describe('Custom Context Props', () => {
 
     // Get the snackbar test component
     const Snackbar = wrapper.find('.snackbarCustom')
-    const SnackbarIcon = wrapper.find('.snackbarIcon')
 
     // Expect the following conditions
     expect(Snackbar.props().style).toMatchObject({ backgroundColor: '#000' })
     expect(Snackbar.props().style).not.toMatchObject({ backgroundColor: defaults.successColor })
-    expect(SnackbarIcon.props().className).toContain('fa fa-eye')
-    expect(SnackbarIcon.props().className).not.toContain(defaults.successIcon)
   })
 
-  it('should open the snackbar with a custom warningColor and warningIcon', () => {
+  it('should open the snackbar with a custom warningColor', () => {
     // Wrapper with Provider
-    const wrapper = mountContext(<ComponentMock />, { warningColor: '#000', warningIcon: 'fa fa-eye' })
+    const wrapper = mountContext(<ComponentMock />, { warningColor: '#000' })
 
     // Get the component mock and clicks on the openWarning button.
     const Component = wrapper.find(ComponentMock)
@@ -105,18 +102,15 @@ describe('Custom Context Props', () => {
 
     // Get the snackbar test component
     const Snackbar = wrapper.find('.snackbarCustom')
-    const SnackbarIcon = wrapper.find('.snackbarIcon')
 
     // Expect the following conditions
     expect(Snackbar.props().style).toMatchObject({ backgroundColor: '#000' })
     expect(Snackbar.props().style).not.toMatchObject({ backgroundColor: defaults.warningColor })
-    expect(SnackbarIcon.props().className).toContain('fa fa-eye')
-    expect(SnackbarIcon.props().className).not.toContain(defaults.warningIcon)
   })
 
-  it('should open the snackbar with a custom dangerColor and dangerIcon', () => {
+  it('should open the snackbar with a custom dangerColor', () => {
     // Wrapper with Provider
-    const wrapper = mountContext(<ComponentMock />, { dangerColor: '#000', dangerIcon: 'fa fa-eye' })
+    const wrapper = mountContext(<ComponentMock />, { dangerColor: '#000' })
 
     // Get the component mock and clicks on the openDanger button.
     const Component = wrapper.find(ComponentMock)
@@ -124,13 +118,10 @@ describe('Custom Context Props', () => {
 
     // Get the snackbar test component
     const Snackbar = wrapper.find('.snackbarCustom')
-    const SnackbarIcon = wrapper.find('.snackbarIcon')
 
     // Expect the following conditions
     expect(Snackbar.props().style).toMatchObject({ backgroundColor: '#000' })
     expect(Snackbar.props().style).not.toMatchObject({ backgroundColor: defaults.dangerColor })
-    expect(SnackbarIcon.props().className).toContain('fa fa-eye')
-    expect(SnackbarIcon.props().className).not.toContain(defaults.dangerIcon)
   })
 
   it('should open the snackbar without the snackbarIcon', () => {

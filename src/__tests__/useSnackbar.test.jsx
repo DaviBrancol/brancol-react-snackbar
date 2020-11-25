@@ -58,13 +58,9 @@ describe('useSnackbar()', () => {
     // Get the snackbar test component
     const Snackbar = wrapper.find('.snackbarCustom')
     const SnackbarMessage = wrapper.find('.snackbarMessage')
-    const SnackbarIcon = wrapper.find('.snackbarIcon')
-    const SnackbarCloseIcon = wrapper.find('.snackbarCloseIcon')
 
     // Expect the attributes from the Sidebar to be equal to the success default
     expect(SnackbarMessage.text()).toEqual('Success Message')
-    expect(SnackbarIcon.props().className).toContain('fa fa-check-circle')
-    expect(SnackbarCloseIcon.props().className).toContain('fa fa-times')
     expect(Snackbar.props().style).toMatchObject(defaultProperties)
   })
 
@@ -80,13 +76,9 @@ describe('useSnackbar()', () => {
     // Get the snackbar test component
     const Snackbar = wrapper.find('.snackbarCustom')
     const SnackbarMessage = wrapper.find('.snackbarMessage')
-    const SnackbarIcon = wrapper.find('.snackbarIcon')
-    const SnackbarCloseIcon = wrapper.find('.snackbarCloseIcon')
 
     // Expect the attributes from the Sidebar to be equal to the success default
     expect(SnackbarMessage.text()).toEqual('Warning Message')
-    expect(SnackbarIcon.props().className).toContain('fa fa-exclamation-triangle')
-    expect(SnackbarCloseIcon.props().className).toContain('fa fa-times')
     expect(Snackbar.props().style).toMatchObject(defaultProperties)
   })
 
@@ -102,13 +94,9 @@ describe('useSnackbar()', () => {
     // Get the snackbar test component
     const Snackbar = wrapper.find('.snackbarCustom')
     const SnackbarMessage = wrapper.find('.snackbarMessage')
-    const SnackbarIcon = wrapper.find('.snackbarIcon')
-    const SnackbarCloseIcon = wrapper.find('.snackbarCloseIcon')
 
     // Expect the attributes from the Sidebar to be equal to the success default
     expect(SnackbarMessage.text()).toEqual('Danger Message')
-    expect(SnackbarIcon.props().className).toContain('fa fa-exclamation-circle')
-    expect(SnackbarCloseIcon.props().className).toContain('fa fa-times')
     expect(Snackbar.props().style).toMatchObject(defaultProperties)
   })
 

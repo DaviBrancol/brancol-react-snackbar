@@ -1,15 +1,13 @@
 import React from 'react'
 import { SnackbarProps, Position, Style } from './SnackbarProps'
 import cs from 'classnames'
+import { FiBellOff, FiCheckCircle, FiX } from 'react-icons/fi'
 import styles from './Snackbar.css'
 
 export function Snackbar({
   successColor,
   warningColor,
   dangerColor,
-  successIcon,
-  warningIcon,
-  dangerIcon,
   message,
   style,
   isOpen,
@@ -34,10 +32,13 @@ export function Snackbar({
     else if (style === 'danger') return dangerColor
   }
 
-  function getIcon(style: Style) {
-    if (style === 'success') return successIcon
-    else if (style === 'warning') return warningIcon
-    else if (style === 'danger') return dangerIcon
+  function FiDisplayIcon({ className, style }) {
+    if (style === 'success') return <FiCheckCircle className={className} />
+    else if (style === 'warning') return <FiBellOff className={className} />
+    else if (style === 'danger') return <FiBellOff className={className} />
+    else {
+      return <FiBellOff className={className} />
+    }
   }
 
   function generateStyle(style: Style) {
@@ -58,10 +59,10 @@ export function Snackbar({
       style={generateStyle(style)}
     >
       <div className={cs(`${styles.snackbarContent}`)}>
-        {displayIcon && <i className={cs(`${styles.snackbarIcon} ${getIcon(style)}`)} />}
+        {displayIcon && <FiDisplayIcon className={styles.snackbarIcon} style={style} />}
         <p className={cs(`${styles.snackbarMessage}`)}>{message}</p>
       </div>
-      {displayCloseIcon && <i onClick={() => setIsOpen(false)} className={cs(`${styles.snackbarCloseIcon} fa fa-times`)} />}
+      {displayCloseIcon && <FiX onClick={() => setIsOpen(false)} className={cs(`${styles.snackbarCloseIcon}`)} />}
     </div>
   )
 }

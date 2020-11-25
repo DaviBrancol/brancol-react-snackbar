@@ -10,7 +10,7 @@ export default {
     file: 'dist/index.js',
     format: 'cjs',
   },
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'react-icons'],
   plugins: [
     postcss({
       modules: true,

@@ -1,7 +1,7 @@
 {
   "name": "@brancol/react-snackbar",
   "description": "Brancol - React Snackbar",
-  "version": "0.2.1",
+  "version": "0.2.8",
   "main": "dist/index.js",
   "files": [
     "./dist"
@@ -38,14 +38,16 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0"
   },
   "peerDependencies": {
     "@types/classnames": "^2.2.10",
     "classnames": "^2.2.6",
     "react": "16.x",
-    "react-dom": "16.x"
+    "react-dom": "16.x",
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

@@ -7,9 +7,6 @@ export interface SnackbarProviderProps {
   successColor: string
   warningColor: string
   dangerColor: string
-  successIcon: string
-  warningIcon: string
-  dangerIcon: string
   showIcon: boolean
   showCloseIcon: boolean
   children: ReactNode
@@ -29,9 +26,6 @@ export interface SnackbarProps {
   successColor: string
   warningColor: string
   dangerColor: string
-  successIcon: string
-  warningIcon: string
-  dangerIcon: string
   isOpen: boolean
   setIsOpen: Function
   isAnimating: boolean
